@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 100;
+    src: local("Yekan bakh thin"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-Thin.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Yekan bakh light"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-Light.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Yekan bakh regular"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Yekan bakh medium"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-SemiBold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Yekan bakh demi bold"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-Bold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Yekan bakh bold"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-ExtraBold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 800;
+    src: local("Yekan bakh extra bold"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-Black.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-style: normal;
+    font-weight: 900;
+    src: local("Yekan bakh black"),
+      url("../fonts/yekan-bakh/YekanBakhFaNum-ExtraBlack.woff2") format("woff2");
+    font-display: swap;
+  }
+  body {
+    @apply font-YekanBakh;
+  }
+  img {
+    @apply w-full h-auto;
+  }
+}
+@layer components {
+  .box-logo {
+    @apply w-32 lg:w-52 h-16 lg:h-36 bg-primary-1 text-white flex items-center justify-center;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+  }
+
+  .parent-logo {
+    @apply overflow-hidden lg:absolute right-5;
+    filter: url('#goo');
+    z-index: 1;
+
+  }
+  .parent-logo img {
+    @apply w-24 lg:w-30 ml-5;
+  }
+  .active-link {
+    @apply text-primary-1;
+  }
+  .showcase {
+    background-image: url("../images/svg/show-case-home.svg");
+    background-size: cover;
+    background-position: center bottom;
+    height: calc(100vh - 110px);
+  }
+  @media (min-width: 992px) {
+    .showcase {
+      height: calc(100vh - 130px);
+    }
+  }
+  .road-map {
+    height: 580px;
+    background-image: url("../images/svg/path-vertical.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media (min-width: 768px) {
+    .road-map {
+      height: 400px;
+      background-image: url("../images/svg/path-horizontal.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto auto;
+    }
+  }
+
+}
